@@ -78,7 +78,6 @@
 
     <meta name="msapplication-TileImage" content="https://arbismart.com/wp-content/uploads/2020/02/favicon-arbismart.ico" />
 
-    <script src="//code.jivosite.com/widget/f3pnGqtMGz" async></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <style>
         #google_translate_element {
