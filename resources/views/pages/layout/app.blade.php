@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel='dns-prefetch' href='http://s.w.org/' />
-   
+
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -51,7 +51,7 @@
         }
         .logo {
         width: 183px;
-        height: 56px;
+        height: 70px;
         display: block;
 
         background-size: contain;
@@ -108,7 +108,7 @@
         .goog-te-gadget .goog-te-combo {
             background-color: rgb(107, 100, 100);
             color: white;
-        
+
         }
 
 
@@ -142,7 +142,7 @@
                     <img class="logo" src="{{ asset('img/logo.png')}}" alt="">
                 </a>
                 </div>
-                
+
             </div>
             {{-- <div id="google_translate_element"></div>
                 <script>
@@ -172,7 +172,7 @@
                         <ul class="sub-menu">
 
                             <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('about') }}">Company</a></li>
-                            
+
                             <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="{{ route('contact')}}">Support</a></li>
                         </ul>
                     </li>
@@ -183,9 +183,9 @@
                     <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
                 </div>
                 <div class="item">
-                   
+
                 </div>
-                
+
             </div>
             <div class="col-right lm-show">
                 <div class="item">
@@ -230,7 +230,7 @@
                         <ul class="sub-menu">
 
                             <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('about') }}">Company</a></li>
-                            
+
                             <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="{{ route('contact')}}">Support</a></li>
                         </ul>
                     </li>
@@ -244,7 +244,7 @@
                     <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
                 </div>
                 <div class="item">
-                    
+
 
                 </div>
             </div>
@@ -271,7 +271,7 @@
                             }
                         </script>
                     </div>
-                    
+
                 </div>
 
 
@@ -282,11 +282,11 @@
                     <li id="menu-item-1702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702"><a href="{{route('exchange') }}">Exchange</a></li>
                     <li id="menu-item-1704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1704"><a href="{{ route('contact')}}">Support</a></li>
                     <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="{{ route('about')}}">Company</a></li>
-                </ul> 
-                
+                </ul>
+
                 <ul id="menu-footer-menu-3" class="ui-nav-menu menu"><li id="menu-item-1706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1706"><a href="{{ route('terms')}}">Terms and Conditions</a></li>
                     <li id="menu-item-2103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2103"><a href="{{ route('policy')}}">Privacy Policy</a></li>
-                   
+
                 </ul> </div>
         </div>
         <div class="sub-footer">

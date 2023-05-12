@@ -145,10 +145,4 @@ class DepositController extends Controller
         return view('dashboard.deposit.cancel', compact('deposit'));
     }
 
-//    public function deleteDeposit($id)
-//    {
-//        $deposit = Deposit::findOrFail($id);
-//        $deposit->delete();
-//        return redirect()->route('user.cancelDeposit');
-//    }
 }
