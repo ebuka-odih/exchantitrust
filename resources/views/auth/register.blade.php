@@ -112,7 +112,7 @@
                                                             <input name="email" required="" class="form-control" placeholder="Email Address" type="email">
                                                         </div>
                                                         <div class="form-group mt-3">
-                                                            <input name="username" autocomplete="off" required="" class="form-control" placeholder="User Name" type="text">
+                                                            <input name="username" autocomplete="off" required="" class="form-control" placeholder="Username" type="text">
                                                         </div>
 
                                                         <div class="form-group mt-3">

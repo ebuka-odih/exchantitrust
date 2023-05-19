@@ -209,9 +209,6 @@
                 </div>
             </div>
             <div class="section">
-                <div class="item">
-                    <a class="ui-nav-link" href="{{ route('index') }}">Home</a>
-                </div>
                 <ul id="menu-header-1" class="menu">
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('index') }}">Home</a></li>
 
