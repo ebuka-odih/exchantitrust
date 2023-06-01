@@ -13,7 +13,6 @@
                                     <div class="buy-coin  bubles-down">
                                         <div>
                                             <h2>Buy & Sell 100+ Assets Instantly</h2>
-                                            <p>Lorem Ipsum has been.</p>
                                             <a href="{{ route('user.stock') }}" class="btn btn-primary">Buy Stock</a>
                                         </div>
                                         <div class="coin-img">

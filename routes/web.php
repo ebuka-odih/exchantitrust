@@ -42,7 +42,7 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::get('/profile/security', "UserController@security")->name('security');
     Route::post('update/security', "UserController@updateSecurity")->name('updateSecurity');
     Route::get('profile', "UserController@profile")->name('profile');
-    Route::post('update/profile', "UserController@updateProfile")->name('updateProfile');
+    Route::patch('update/profile', "UserController@updateProfile")->name('updateProfile');
 
     Route::get('transactions', "TransactionController@transactions")->name('transactions');
     Route::get('transactions/deposit', "TransactionController@deposits")->name('deposits');
