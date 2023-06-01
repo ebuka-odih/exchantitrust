@@ -12,7 +12,8 @@ class WithdrawMethodController extends Controller
     public function account()
     {
         $accounts = WithdrawMethod::whereUserId(auth()->id())->get();
-        return view('dashboard.user.account', compact('accounts'));
+        $user = Auth::user();
+        return view('dashboard.user.account', compact('accounts', 'user'));
     }
     public function accountUpdate(Request $request)
     {
@@ -49,7 +50,7 @@ class WithdrawMethodController extends Controller
         $data['user_id'] = Auth::id();
         $data['payment_type'] = 0;
         WithdrawMethod::create($data);
-        return redirect()->back();
+        return redirect()->back()->with('success', 'wallet added successfully');
     }
 
     protected function getBTCData(Request $request)

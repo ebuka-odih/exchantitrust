@@ -1,5 +1,16 @@
 @extends('dashboard.layout.app')
 @section('content')
+    <style>
+        .form-control {
+            background: #fff;
+            color: #6e6e6e;
+            line-height: 2.4;
+            font-size: 1rem;
+            height: 3rem;
+            border-radius: 0.625rem;
+            border-color: #5b5bce;
+        }
+    </style>
 
     <div class="content-body" style="min-height: 996px;">
         <div class="container-fluid">
@@ -87,18 +98,18 @@
                             <div class="profile-tab">
                                 <div class="custom-tab-1">
                                     <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item" role="presentation"><a href="{{ route('user.profile') }}" data-bs-toggle="tab" class="nav-link active show" aria-selected="true" role="tab">Edit Profile</a>
+                                        <li class="nav-item" ><a href="{{ route('user.profile') }}" class="nav-link">Edit Profile</a>
                                         </li>
-                                        <li class="nav-item" role="presentation"><a href="#about-me" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1" role="tab">Payout Account</a>
+                                        <li class="nav-item" ><a href="{{ route('user.accounts') }}" class="nav-link active">Payout Account</a>
                                         </li>
-                                        <li class="nav-item" role="presentation"><a href="#profile-settings" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1" role="tab">Security</a>
+                                        <li class="nav-item" ><a href="#profile-settings" class="nav-link">Security</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content">
                                         <div class="col-12">
-                                            <form action="{{ route('user.updateProfile') }}" method="POST">
+                                            <br>
+                                            <form action="{{ route('user.storeBTC') }}" method="POST">
                                                 @csrf
-                                                @method('PATCH')
                                                 @if ($errors->any())
                                                     <div class="alert alert-danger">
                                                         <ul>
@@ -109,35 +120,52 @@
                                                     </div>
                                                 @endif
                                                 @if(session()->has('success'))
-                                                    <div class="alert alert-success alert-dismissible fade show">
+                                                    <div class="alert alert-success">
                                                         {{ session()->get('success') }}
-                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
                                                     </div>
                                                 @endif
 
-                                                <div class="form-group row">
+                                                <div class="form-group">
                                                     <label class="col-sm-2 col-form-label">Wallet Name</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="name" value="{{ old('name', optional($user)->name) }}">
+                                                        <input class="form-control" type="text" name="acct_label" >
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group row">
+                                                <div class="form-group">
                                                     <label class="col-sm-2 col-form-label">Wallet Address</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="phone" value="{{ old('phone', optional($user)->phone) }}">
+                                                        <input class="form-control" type="text" name="wallet_address" >
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group row">
+                                                <div class="form-group ">
                                                     <label class="col-sm-2 col-form-label"></label>
                                                     <div class="col-sm-10">
-                                                        <button type="submit" class="btn btn-warning">Save</button>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
                                                     </div>
                                                 </div>
                                             </form>
+                                            <br>
+                                            <hr>
+                                            <table class="table table-striped">
+                                               <thead>
+                                                   <tr>
+                                                       <th>Wallet Name</th>
+                                                       <th>Wallet Address</th>
+                                                   </tr>
+                                               </thead>
+
+                                                <tbody>
+                                                @foreach($accounts as $item)
+                                                    <tr>
+                                                        <td>{{ $item->acct_label }}</td>
+                                                        <td>{{ $item->wallet_address }}</td>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+
+                                            </table>
                                         </div>
 
                                     </div>
