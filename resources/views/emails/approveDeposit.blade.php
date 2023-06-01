@@ -1,5 +1,5 @@
 @component('mail::message')
-    
+
 # Dear {{ $deposit->user['name'] }}
 
 Your deposit sum of {{ $deposit->amount }} has been approved

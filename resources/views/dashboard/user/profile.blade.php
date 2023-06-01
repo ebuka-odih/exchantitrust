@@ -91,7 +91,7 @@
                                     </li>
                                     <li class="nav-item" ><a href="{{ route('user.accounts') }}" class="nav-link">Payout Account</a>
                                     </li>
-                                    <li class="nav-item" ><a href="#profile-settings" class="nav-link">Security</a>
+                                    <li class="nav-item" ><a href="{{ route('user.security') }}" class="nav-link">Security</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">

@@ -100,16 +100,16 @@
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item" ><a href="{{ route('user.profile') }}" class="nav-link">Edit Profile</a>
                                         </li>
-                                        <li class="nav-item" ><a href="{{ route('user.accounts') }}" class="nav-link active">Payout Account</a>
+                                        <li class="nav-item" ><a href="{{ route('user.accounts') }}" class="nav-link">Payout Account</a>
                                         </li>
-                                        <li class="nav-item" ><a href="{{ route('user.security') }}" class="nav-link">Security</a>
+                                        <li class="nav-item" ><a href="{{ route('user.security') }}" class="nav-link active">Security</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content">
                                         <div class="col-12">
-                                            <br>
-                                            <form action="{{ route('user.storeBTC') }}" method="POST">
+                                            <form action="{{ route('user.updateProfile') }}" method="POST">
                                                 @csrf
+                                                @method('PATCH')
                                                 @if ($errors->any())
                                                     <div class="alert alert-danger">
                                                         <ul>
@@ -120,54 +120,42 @@
                                                     </div>
                                                 @endif
                                                 @if(session()->has('success'))
-                                                    <div class="alert alert-success">
+                                                    <div class="alert alert-success alert-dismissible fade show">
                                                         {{ session()->get('success') }}
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
                                                     </div>
                                                 @endif
 
                                                 <div class="form-group">
-                                                    <label class="col-sm-2 col-form-label">Wallet Name</label>
+                                                    <label class="col-sm-2 col-form-label">Current Password</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="acct_label" >
+                                                        <input class="form-control" type="text" name="current_password">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-sm-2 col-form-label">Wallet Address</label>
+                                                    <label class="col-sm-2 col-form-label">New Password</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="wallet_address" >
+                                                        <input class="form-control" type="text" name="new_password" >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-form-label">Confirm New Password</label>
+                                                    <div class="col-sm-10">
+                                                        <input class="form-control" type="text" name="new_confirm_password" >
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group ">
+                                                <div class="form-group">
                                                     <label class="col-sm-2 col-form-label"></label>
                                                     <div class="col-sm-10">
-                                                        <button type="submit" class="btn btn-primary">Save</button>
+                                                        <button type="submit" class="btn btn-primary">Change Password</button>
                                                     </div>
                                                 </div>
                                             </form>
-                                            <br>
-                                            <hr>
-                                            <table class="table table-striped">
-                                               <thead>
-                                                   <tr>
-                                                       <th>Wallet Name</th>
-                                                       <th>Wallet Address</th>
-                                                   </tr>
-                                               </thead>
-
-                                                <tbody>
-                                                @foreach($accounts as $item)
-                                                    <tr>
-                                                        <td>{{ $item->acct_label }}</td>
-                                                        <td>{{ $item->wallet_address }}</td>
-                                                    </tr>
-                                                @endforeach
-                                                </tbody>
-
-                                            </table>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

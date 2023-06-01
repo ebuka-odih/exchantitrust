@@ -72,7 +72,8 @@ class UserController extends Controller
 
     public function security()
     {
-        return view('dashboard.user.security');
+        $user = Auth::user();
+        return view('dashboard.user.security', compact('user'));
     }
 
     public function storePassword(Request $request)
