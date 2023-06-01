@@ -42,12 +42,12 @@
                                     </div>
                                 @endif
 
-                                <div class="mb-3">
-                                    <div class="visible-print text-center">
-                                        {!! QrCode::size(100)->generate($deposit->crypto_wallet->value); !!}
-                                        <p>Scan me to copy payment wallet.</p>
-                                    </div>
-                                </div>
+{{--                                <div class="mb-3">--}}
+{{--                                    <div class="visible-print text-center">--}}
+{{--                                        {!! QrCode::size(100)->generate($deposit->crypto_wallet->value); !!}--}}
+{{--                                        <p>Scan me to copy payment wallet.</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                                 <div class="input-group mb-3">
                                     <span class="input-group-text">Wallet</span>
                                     <input type="text" class="form-control" id="foo" value="{{ $deposit->crypto_wallet->value }}">

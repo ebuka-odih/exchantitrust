@@ -87,11 +87,11 @@
                         <div class="profile-tab">
                             <div class="custom-tab-1">
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item" role="presentation"><a href="#my-posts" data-bs-toggle="tab" class="nav-link active show" aria-selected="true" role="tab">Edit Profile</a>
+                                    <li class="nav-item" ><a href="{{ route('user.profile') }}" class="nav-link active">Edit Profile</a>
                                     </li>
-                                    <li class="nav-item" role="presentation"><a href="#about-me" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1" role="tab">Payout Account</a>
+                                    <li class="nav-item" ><a href="{{ route('user.accounts') }}" class="nav-link">Payout Account</a>
                                     </li>
-                                    <li class="nav-item" role="presentation"><a href="#profile-settings" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1" role="tab">Security</a>
+                                    <li class="nav-item" ><a href="#profile-settings" class="nav-link">Security</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
@@ -408,7 +408,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label"></label>
                                                 <div class="col-sm-10">
-                                                    <button type="submit" class="btn btn-warning">Save</button>
+                                                    <button type="submit" class="btn btn-warning">Update</button>
                                                 </div>
                                             </div>
                                         </form>
