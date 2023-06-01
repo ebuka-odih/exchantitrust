@@ -14,10 +14,7 @@
                                     <a href="{{ route('user.deposits') }}" class="site-button">Stocks</a>
                                 </li>
                                 <li class="btn">
-                                    <a href="{{ route('user.withdrawal') }}" class="site-button">Crypto</a>
-                                </li>
-                                <li data-filter=".gaming" class="btn">
-                                    <a href="javascript:void(0);" class="site-button">Precious Metal</a>
+                                    <a href="{{ route('user.crypto') }}" class="site-button">Crypto</a>
                                 </li>
                             </ul>
                         </div>

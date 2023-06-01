@@ -193,7 +193,6 @@
                     <ul aria-expanded="false">
                         <li><a href="{{ route('user.stock') }}">Stocks</a></li>
                         <li><a href="{{ route('user.crypto') }}">Crypto</a></li>
-                        <li><a href="coin-details.html">Precious Metals</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ route('user.investment') }}" >
