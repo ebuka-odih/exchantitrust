@@ -34,7 +34,7 @@
                                             <div class="chart-num">
                                                 <h2>Profit</h2>
                                                 <span style="padding-right: 30px;">@convert(auth()->user()->profit)</span>
-                                                <span class="pull-r">+ {{ $percent }}%</span>
+{{--                                                <span class="pull-r">+ {{ $percent }}%</span>--}}
                                             </div>
                                         </div>
                                     </div>

@@ -57,10 +57,10 @@ class InvestController extends Controller
     public function investment()
     {
         $user = Auth::user();
-        $percent = round(($user->invest_bal / $user->profit) * 100, 2);
+//        $percent = round(($user->invest_bal / $user->profit) * 100, 2);
 
         $invested_stock = Invest::whereUserId(auth()->id())->where('status', 1)->sum('amount');
         $transact = Invest::whereUserId(\auth()->id())->get();
-        return view('dashboard.stocks.investment', compact('invested_stock', 'transact', 'percent'));
+        return view('dashboard.stocks.investment', compact('invested_stock', 'transact'));
     }
 }
